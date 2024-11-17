@@ -1,0 +1,18 @@
+﻿a ASSIGN 1             
+b ASSIGN -6
+c ASSIGN 2            
+
+delta ASSIGN b MULTIPLY b MINUS 4 MULTIPLY a MULTIPLY c 
+
+IF LPAREN delta GREATER_EQUAL 0 RPAREN LBRACE            
+    sqrt_delta ASSIGN SQRT LPAREN delta RPAREN          
+
+    x1 ASSIGN LPAREN MINUS b PLUS sqrt_delta RPAREN DIVIDE LPAREN 2 MULTIPLY a RPAREN  
+    x2 ASSIGN LPAREN MINUS b MINUS sqrt_delta RPAREN DIVIDE LPAREN 2 MULTIPLY a RPAREN  
+
+    PRINT LPAREN x1 RPAREN                              
+    PRINT LPAREN x2 RPAREN                             
+ RBRACE
+ELSE LBRACE
+    PRINT LPAREN QUOTATIONMARK Brak rozwiązań rzeczywistych QUOTATIONMARK RPAREN  
+RBRACE
